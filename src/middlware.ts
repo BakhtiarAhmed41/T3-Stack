@@ -9,5 +9,3 @@ export const config = {
   matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
  
-console.log("Middlware running");
-
