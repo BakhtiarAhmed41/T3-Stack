@@ -11,9 +11,11 @@ datasource db {
 }
 
 model Post {
-  id      Int     @id @default(autoincrement())
-  name    String
-  checked Boolean
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  authorId  String
 
-  @@index([name])
+  content String @db.VarChar(255)
+
+  @@index([authorId])
 }
