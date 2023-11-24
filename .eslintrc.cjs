@@ -34,3 +34,6 @@ const config = {
 };
 
 module.exports = config;
+module.exports = {
+  extends: ['plugin:@typescript-eslint/recommended'],
+};

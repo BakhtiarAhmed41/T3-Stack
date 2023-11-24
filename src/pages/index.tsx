@@ -1,5 +1,6 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 import Head from "next/head";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Link from "next/link";
 
 
@@ -9,9 +10,10 @@ import { api } from "~/utils/api";
 
 
 export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
   const user = useUser();
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { data } = api.post.getAll.useQuery();
 
   return (
     <>
